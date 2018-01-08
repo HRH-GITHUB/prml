@@ -23,22 +23,16 @@
 
 $ X $取$ x_i $且$ Y $取$ y_j $的概率被记作$ p(X = x_i,Y = y_j) $,被称为$ X = x_i $和$ Y = y_j $的联合概率(joint probability)。它的计算方法是单元格$ i, j $中的数量与总数的比值，即：     
 $$
-\begin{equation}
 p(X = x_i,Y = y_i) = \frac{n_{ij}}{N} \tag{1.5}
-\end{equation}
 $$
 这里有一个隐式的规则：$ N \to \infty $。类似地,$ X $取$ x_i $（与$ Y $取值无关）的概率被记作$ p(X = x_i) $,计算方法是列$ i $的数量与总数的比值,即:     
 $$
-\begin{equation}
 p(X = x_i) = \frac{c_{i}}{N} \tag{1.6}
-\end{equation}
 $$  
 由于在图1.10中列$ i $的数量是列中每一个单元格的数量的和（$ c_i = \sum_jn_{ij} $），所以根据公式(1.5)和(1.6)我们就得到：     
 
 $$
-\begin{equation}
 p(X = x_i) = \sum\limits_{j=1}^lp(X = x_i, Y = y_j) \tag{1.7}
-\end{equation}
 $$    
 
 这就是加法规则。注意,$ p(X = x_i) $有时被称为边缘概率(marginal probability),因为它是通过对其它变量的边缘化或求和来得到的（本例中为$ Y $）。     
@@ -46,17 +40,13 @@ $$
 如果我们只考虑那些$ X = x_i $的情况，那么其中$ Y = y_j $所占的比例被记作$ p(Y = y_j | X = x_i) $，被称为给定$ X = x_i $的$ Y = y_j $的条件概率(conditional probability)。它是由单元格$ i, j $中的数量与列$ i $的总数的比值，即：    
 
 $$
-\begin{equation}
 p(Y = y_j | X = x_i) = \frac{n_{ij}}{c_i} \tag{1.8}
-\end{equation}
 $$   
 
 由公式(1.5),(1.6)和(1.8)我们可以得到：
 
 $$
-\begin{equation}
 p(X = x_i, Y = y_j) = \frac{n_{ij}}{N} = \frac{n_{ij}}{ci} \cdot \frac{c_i}{N} = p(Y = y_j|X = x_i)p(X = x_i) \tag{1.9}
-\end{equation}
 $$   
 这就是概率的乘法规则。     
 
